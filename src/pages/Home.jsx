@@ -9,7 +9,7 @@ function Home() {
                 <Link to="/register" className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
                     Registrarse
                 </Link>
-                <Link to="/scan" className="bg-gray-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-700 transition">
+                <Link to="/scanQR" className="bg-gray-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-700 transition">
                     Encontré una Mascota
                 </Link>
             </div>

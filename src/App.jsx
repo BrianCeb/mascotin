@@ -15,7 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pet/:id" element={<PetProfile />} />
-        <Route path="/scan" element={<ScanQR />} />
+        <Route path="/scanQR" element={<ScanQR />} />
       </Routes>
     </Router>
   </>
