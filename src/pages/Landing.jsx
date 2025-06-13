@@ -9,26 +9,29 @@ function Landing() {
             <MascotinCarrusel />
 
             {/* HERO */}
-            <section className="py-16 px-6 text-center bg-pink-50">
-                <div className="max-w-6xl mx-auto">
-                    <h1 className="text-5xl font-bold mb-6">Nunca pierdas a tu mejor amigo.</h1>
-                    <p className="text-xl mb-8 max-w-2xl mx-auto">
-                        Con <strong>Mascotin</strong>, tu mascota lleva su identificación única con QR. Si se pierde, quien la encuentre puede contactarte al instante.
-                    </p>
-                    <div className="flex justify-center gap-6 flex-wrap">
-                        <Link
-                            to="/register"
-                            className="bg-pink-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-pink-700 transition"
-                        >
-                            Registrá tu mascota
-                        </Link>
-                        <Link
-                            to="/scanQR"
-                            className="bg-gray-700 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition"
-                        >
-                            Encontré una mascota
-                        </Link>
+            <section className="py-20 px-6 bg-pink-50">
+                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+                    {/* Texto */}
+                    <div className="md:w-1/2 flex justify-center">
+                        <img src="/mascotin.png" alt="Mascota ilustración" className="w-72 h-auto" />
                     </div>
+                    <div className="md:w-1/2 text-center md:text-left">
+                        <h1 className="text-5xl font-extrabold mb-6 leading-tight">Nunca pierdas a tu mejor amigo.</h1>
+                        <p className="text-xl mb-8 text-gray-700">
+                            Con <strong>Mascotin</strong>, tu mascota lleva su identificación única con QR. Si se pierde, quien la encuentre puede contactarte al instante.
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                            <Link to="/register" className="bg-pink-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-pink-700 transition">
+                                Registrá tu mascota
+                            </Link>
+                            <Link to="/scanQR" className="bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-black transition">
+                                Encontré una mascota
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Imagen de referencia */}
+                    
                 </div>
             </section>
 
@@ -74,12 +77,24 @@ function Landing() {
             {/* BENEFICIOS */}
             <section className="py-20 px-6 bg-pink-50 text-center">
                 <div className="max-w-5xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-8">¿Por qué usar Mascotin?</h2>
+                    <h2 className="text-4xl font-bold mb-10">¿Por qué usar Mascotin?</h2>
                     <div className="grid md:grid-cols-2 gap-6 text-left text-lg text-gray-700">
-                        <div>✅ Reencuentros más rápidos y seguros</div>
-                        <div>✅ Sin apps: cualquier persona puede escanear el código</div>
-                        <div>✅ Personalizable: incluye datos de salud, contacto y fotos</div>
-                        <div>✅ Ideal para paseos, viajes o mascotas aventureras</div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-pink-600 text-xl">🐾</span>
+                            <p><strong>Reencuentros más rápidos y seguros</strong><br />Tu mascota puede volver con vos en minutos.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-pink-600 text-xl">📱</span>
+                            <p><strong>Sin apps necesarias</strong><br />Cualquier persona puede escanear el código QR con su celular.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-pink-600 text-xl">📝</span>
+                            <p><strong>Personalizable</strong><br />Incluye datos de salud, contacto, fotos y más.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-pink-600 text-xl">✈️</span>
+                            <p><strong>Ideal para paseos y viajes</strong><br />Perfecto para mascotas aventureras o en tránsito.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -93,26 +108,23 @@ function Landing() {
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 mt-6">
                         <div className="bg-pink-100 p-6 rounded-lg shadow w-80">
-                            <p>“Gracias a Mascotin recuperamos a Tomy en menos de 2 horas.”</p>
-                            <span className="block mt-2 font-semibold">– Mariana</span>
+                            <p className="italic">“Gracias a Mascotin recuperamos a Tomy en menos de 2 horas.”</p>
+                            <span className="block mt-2 font-semibold text-pink-700">– Mariana</span>
                         </div>
                         <div className="bg-pink-100 p-6 rounded-lg shadow w-80">
-                            <p>“Una solución simple y efectiva. ¡Gracias!”</p>
-                            <span className="block mt-2 font-semibold">– Federico</span>
+                            <p className="italic">“Una solución simple y efectiva. ¡Gracias!”</p>
+                            <span className="block mt-2 font-semibold text-pink-700">– Federico</span>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* CTA FINAL */}
-            <section className="py-16 px-6 bg-pink-600 text-white text-center">
+            <section className="py-20 px-6 bg-pink-600 text-white text-center">
                 <div className="max-w-xl mx-auto">
                     <h2 className="text-4xl font-bold mb-4">Cuidá lo que más querés</h2>
                     <p className="text-lg mb-6">Registrá a tu mascota hoy y asegurate de que siempre pueda volver a casa.</p>
-                    <Link
-                        to="/register"
-                        className="bg-white text-pink-600 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
-                    >
+                    <Link to="/register" className="bg-white text-pink-600 font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition">
                         Empezar ahora
                     </Link>
                 </div>

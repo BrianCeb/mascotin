@@ -53,7 +53,7 @@ const MascotinCarrusel = () => {
                 </p>
                 <Link
                     to="/register"
-                    className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-full shadow-md transition-all duration-300 text-sm"
+                    className="bg-pink-400 hover:bg-pink-500 text-black font-semibold px-4 py-2 rounded-full shadow-md transition-all duration-300 text-sm"
                 >
                     Registrá a tu mascota
                 </Link>
@@ -64,7 +64,7 @@ const MascotinCarrusel = () => {
                 {slides.map((_, index) => (
                     <div
                         key={index}
-                        className={`w-2 h-2 rounded-full ${index === current ? 'bg-yellow-400' : 'bg-white/50'
+                        className={`w-2 h-2 rounded-full ${index === current ? 'bg-pink-400' : 'bg-white/50'
                             }`}
                     ></div>
                 ))}
